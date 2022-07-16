@@ -1,0 +1,352 @@
+@import "./globals";
+@import "./variables";
+@import "./mixins";
+
+//Container
+.container {
+    max-width: 343px;
+    padding: 0 16px;
+}
+
+//Buttons
+.btn {
+    width: 140px;
+    min-height: 48px;
+    padding: 9px 24px 11px;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+}
+
+.gradient1 {
+    width: 167px;
+    min-height: 56px;
+    padding: 15px 37px 15px 38px;
+    line-height: 2.6rem;
+    border-radius: 31.5px;
+}
+
+//Header
+.header {
+    padding: 16px 16px 0;
+
+    &__top {
+        @include flexBetween;
+        max-width: 343px;
+        margin: 0 auto 38px auto;
+
+        img {
+            width: 89px;
+        }
+    }
+}
+
+//Hero section
+.hero {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 66px;
+
+    &__content {
+
+        &-title {
+            font-size: 4rem;
+            line-height: 5.04rem;
+            margin-bottom: 26px;
+        }
+
+        &-text {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            margin-bottom: 26px;
+        }
+
+        .btn {
+            margin-bottom: 46px;
+        }
+    }
+
+    &__img {
+        min-height: 301px;
+        max-width: 327px;
+        background-image: url("../assets/mobile/image-hero-mobile.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+//Courses section
+.courses {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+
+    .course {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 24px 29px 32px 28px;
+        box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+        border-radius: 10px;
+        margin-bottom: 40px;
+
+        &__img {
+            position: absolute;
+            top: -24px;
+            left: 28px;
+        }
+
+        &__title {
+            margin: 24px 0 16px;
+            font-size: 2rem;
+            line-height: 2.52rem;
+        }
+
+        &__text {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            margin-bottom: 24px;
+        }
+
+        &__link {
+            margin-top: auto;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 2.8rem;
+            color: $pink;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.2s ease-out;
+
+            &:hover {
+                color: $lightPink;
+            }
+        }
+    }
+
+    .most__popular {
+        padding: 24px 29px 32px 28px;
+        background: $gradient1;
+        font-size: 1.8rem;
+        line-height: 3.2rem;
+        box-shadow: none;
+    }
+}
+
+//Footer
+.footer {
+    min-height: 120px;
+    padding: 36px 16px;
+    background-color: $darkBlue;
+
+    &__inner {
+        @include flexBetween;
+        max-width: 343px;
+        margin: 0 auto;
+
+        img {
+            width: 89px;
+        }
+    }
+}
+
+@media screen and (min-width: 375px) {
+
+    //Container
+    .container {
+        padding: 0;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    //Container
+    .container {
+        max-width: 689px;
+    }
+
+    //Header
+    .header {
+        min-height: 642px;
+        position: relative;
+        padding: 24px 0 0;
+        background-image: url("../assets/tablet/image-hero-tablet.png");
+        background-position: bottom 2rem right -30rem;
+        background-repeat: no-repeat;
+
+        &__top {
+            max-width: 689px;
+            margin-bottom: 100px;
+        }
+    }
+
+    //Hero section
+    .hero {
+        flex-direction: row;
+        margin-bottom: 0;
+
+        &__content {
+            max-width: 398px;
+
+            &-title {
+                margin-bottom: 25px;
+            }
+
+            &-text {
+                margin-bottom: 24px;
+            }
+
+            .btn {
+                margin-bottom: 0;
+            }
+        }
+
+        &__img {
+            display: none;
+        }
+    }
+
+    //Main
+    main {
+        margin-top: 95px;
+    }
+
+    //Courses section
+    .courses {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 86px;
+
+        .course {
+            flex: 1 0 330px;
+            padding: 24px 22px 32px 32px;
+            margin: 0 10px 60px 0;
+
+            &__img {
+                left: 32px;
+            }
+
+            &__title {
+                font-size: 2.4rem;
+                line-height: 3.024rem;
+            }
+
+            &__text {
+                font-size: 1.8rem;
+                line-height: 2.8rem;
+                max-width: 286px;
+            }
+        }
+
+        .most__popular {
+            padding: 56px 21px 0px 32px;
+        }
+    }
+
+    //Footer
+    .footer {
+        padding: 36px 0;
+
+        &__inner {
+            max-width: 689px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    //Container
+    .container {
+        max-width: 1100px;
+    }
+
+    //Buttons
+    .btn {
+        width: 167px;
+        min-height: 56px;
+        padding: 14px 31px 14px 32px;
+        font-size: 1.8rem;
+    }
+
+    .gradient1 {
+        min-height: 63px;
+        padding: 19px 31px 16px 32px;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+
+    //Header
+    .header {
+        padding: 29px 0 0;
+        min-height: 727px;
+        background-image: url("../assets/desktop/image-hero-desktop.png");
+        background-position: bottom -6rem right -30rem;
+
+        &__top {
+            max-width: 1100px;
+            margin-bottom: 178px;
+
+            img {
+                width: 114px;
+            }
+        }
+    }
+
+    //Hero section
+    .hero {
+        flex-direction: row;
+        margin-bottom: 226px;
+
+        &__content {
+            max-width: 457px;
+
+            &-title {
+                font-size: 5.6rem;
+                line-height: 7.056rem;
+                margin-bottom: 29px;
+            }
+
+            &-text {
+                font-size: 1.8rem;
+                line-height: 2.8rem;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    //Main
+    main {
+        margin-top: 110px;
+    }
+
+    //Courses section
+    .courses {
+        margin-bottom: 140px;
+
+        .course {
+            flex: 1 0 330px;
+            padding: 32px 32px 40px;
+            margin: 0 30px 90px 0;
+        }
+
+        .most__popular {
+            padding: 64px 32px 0px 32px;
+            font-size: 2.4rem;
+            line-height: 4rem;
+        }
+    }
+
+    //Footer
+    .footer {
+        padding: 32px 0;
+
+        &__inner {
+            max-width: 1100px;
+
+            img {
+                width: 114px;
+            }
+        }
+    }
+}

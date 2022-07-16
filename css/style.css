@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  color: #83869A;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
+}
+
+h1,
+h3 {
+  color: #13183F;
+}
+
+h2 {
+  color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+}
+
+.btn {
+  border: none;
+  border-radius: 28px;
+  outline: none;
+  cursor: pointer;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  color: #fff;
+}
+
+.blue {
+  background-color: #13183F;
+  transition: background-color 0.3s ease-out;
+}
+.blue:hover {
+  background-color: #666CA3;
+}
+
+.gradient1 {
+  background-image: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+}
+.gradient1:hover {
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+}
+
+.gradient2 {
+  background-image: linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+}
+.gradient2:hover {
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+}
+
+.container {
+  max-width: 343px;
+  padding: 0 16px;
+}
+
+.btn {
+  width: 140px;
+  min-height: 48px;
+  padding: 9px 24px 11px;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+
+.gradient1 {
+  width: 167px;
+  min-height: 56px;
+  padding: 15px 37px 15px 38px;
+  line-height: 2.6rem;
+  border-radius: 31.5px;
+}
+
+.header {
+  padding: 16px 16px 0;
+}
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 343px;
+  margin: 0 auto 38px auto;
+}
+.header__top img {
+  width: 89px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 66px;
+}
+.hero__content-title {
+  font-size: 4rem;
+  line-height: 5.04rem;
+  margin-bottom: 26px;
+}
+.hero__content-text {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  margin-bottom: 26px;
+}
+.hero__content .btn {
+  margin-bottom: 46px;
+}
+.hero__img {
+  min-height: 301px;
+  max-width: 327px;
+  background-image: url("../assets/mobile/image-hero-mobile.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.courses {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+.courses .course {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 24px 29px 32px 28px;
+  box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+.courses .course__img {
+  position: absolute;
+  top: -24px;
+  left: 28px;
+}
+.courses .course__title {
+  margin: 24px 0 16px;
+  font-size: 2rem;
+  line-height: 2.52rem;
+}
+.courses .course__text {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  margin-bottom: 24px;
+}
+.courses .course__link {
+  margin-top: auto;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+  color: #F74780;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease-out;
+}
+.courses .course__link:hover {
+  color: #FFA7C3;
+}
+.courses .most__popular {
+  padding: 24px 29px 32px 28px;
+  background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  box-shadow: none;
+}
+
+.footer {
+  min-height: 120px;
+  padding: 36px 16px;
+  background-color: #13183F;
+}
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 343px;
+  margin: 0 auto;
+}
+.footer__inner img {
+  width: 89px;
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 689px;
+  }
+  .header {
+    min-height: 642px;
+    position: relative;
+    padding: 24px 0 0;
+    background-image: url("../assets/tablet/image-hero-tablet.png");
+    background-position: bottom 2rem right -30rem;
+    background-repeat: no-repeat;
+  }
+  .header__top {
+    max-width: 689px;
+    margin-bottom: 100px;
+  }
+  .hero {
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+  .hero__content {
+    max-width: 398px;
+  }
+  .hero__content-title {
+    margin-bottom: 25px;
+  }
+  .hero__content-text {
+    margin-bottom: 24px;
+  }
+  .hero__content .btn {
+    margin-bottom: 0;
+  }
+  .hero__img {
+    display: none;
+  }
+  main {
+    margin-top: 95px;
+  }
+  .courses {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 86px;
+  }
+  .courses .course {
+    flex: 1 0 330px;
+    padding: 24px 22px 32px 32px;
+    margin: 0 10px 60px 0;
+  }
+  .courses .course__img {
+    left: 32px;
+  }
+  .courses .course__title {
+    font-size: 2.4rem;
+    line-height: 3.024rem;
+  }
+  .courses .course__text {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    max-width: 286px;
+  }
+  .courses .most__popular {
+    padding: 56px 21px 0px 32px;
+  }
+  .footer {
+    padding: 36px 0;
+  }
+  .footer__inner {
+    max-width: 689px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1100px;
+  }
+  .btn {
+    width: 167px;
+    min-height: 56px;
+    padding: 14px 31px 14px 32px;
+    font-size: 1.8rem;
+  }
+  .gradient1 {
+    min-height: 63px;
+    padding: 19px 31px 16px 32px;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+  .header {
+    padding: 29px 0 0;
+    min-height: 727px;
+    background-image: url("../assets/desktop/image-hero-desktop.png");
+    background-position: bottom -6rem right -30rem;
+  }
+  .header__top {
+    max-width: 1100px;
+    margin-bottom: 178px;
+  }
+  .header__top img {
+    width: 114px;
+  }
+  .hero {
+    flex-direction: row;
+    margin-bottom: 226px;
+  }
+  .hero__content {
+    max-width: 457px;
+  }
+  .hero__content-title {
+    font-size: 5.6rem;
+    line-height: 7.056rem;
+    margin-bottom: 29px;
+  }
+  .hero__content-text {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin-bottom: 40px;
+  }
+  main {
+    margin-top: 110px;
+  }
+  .courses {
+    margin-bottom: 140px;
+  }
+  .courses .course {
+    flex: 1 0 330px;
+    padding: 32px 32px 40px;
+    margin: 0 30px 90px 0;
+  }
+  .courses .most__popular {
+    padding: 64px 32px 0px 32px;
+    font-size: 2.4rem;
+    line-height: 4rem;
+  }
+  .footer {
+    padding: 32px 0;
+  }
+  .footer__inner {
+    max-width: 1100px;
+  }
+  .footer__inner img {
+    width: 114px;
+  }
+}
